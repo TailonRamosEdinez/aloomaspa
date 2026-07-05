@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alooma Spa & Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-cover bg-no-repeat bg-center" style="background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1400&q=80');">
+  <!-- Navbar -->
+  <nav id="navbar" class="flex justify-between items-center p-6 bg-white/60 backdrop-blur-sm shadow-md w-full transition-all duration-300">
+    <div class="flex items-center gap-80">
+  <img src="icone.png" alt="Ícone" class="w-18 h-14" sizes="30" />
+  <h1 class="text-2xl Agendar text-green-600">Alooma Spa & Care</h1>
+</div>
+    <ul class="flex gap-6 text-lg font-semibold text-gray-700">
+      <li><a href="#" class="hover:text-green-600">Serviço</a></li>
+      <li><a href="#" class="hover:text-green-600">Ajuda</a></li>
+      <li><a href="#" class="hover:text-green-600">Sobre</a></li>
+      <li><a href="#" class="hover:text-green-600">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative flex flex-col md:flex-row items-center justify-between p-10 md:p-20 text-white overflow-hidden min-h-screen">
+  <!-- Vídeo de fundo -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="videoPrincipal.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+  <!-- Conteúdo acima do vídeo -->
+  <div class="relative z-10 max-w-xl">
+  <p class="text-7xl md:text-8xl uppercase tracking-wide font-bold mb-6">Lomi Lomi</p>
+  <h2 class="text-4xl md:text-6xl font-bold leading-tight mt-2">Tenha a melhor<br />a melhor massagem</h2>
+</div>
+  <div class="relative z-10 mt-10 md:mt-0 flex flex-col items-center">
+  <img 
+    src="lomilomiHerosection.jpg" 
+    alt="Lomi Lomi Hero Section" 
+    class="w-96 h-64 md:w-[500px] md:h-[350px] mx-auto object-cover rounded-3xl"
+    style="border: none;"
+  >
+  <!-- LomilomiHeroSection aqui -->
+  <div id="LomilomiHeroSection" class="mt-6">
+    <p class="text-lg md:text-xl font-medium text-center">Experimente a tradicional massagem havaiana para relaxamento profundo e bem-estar.</p>
+  </div>
+  <div class="text-center mt-4">
+    <button class="px-6 py-2 bg-white text-blue-700 font-semibold rounded-full shadow-md hover:bg-blue-100 transition">Agendar</button>
+  </div>
+</div>
+  <!-- Overlay para melhorar contraste -->
+  <div class="absolute inset-0 bg-black/40 z-0"></div>
+</section>
+
+  <!-- Combo Section -->
+  <section class="bg-black/50 text-white text-center py-16 min-h-screen flex flex-col justify-center relative overflow-hidden">
+  <!-- Vídeo de fundo combos -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="combos/230188.mov" type="video/mp4" />
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+  <div class="relative z-10">
+    <h3 class="text-xl md:text-2xl tracking-wide uppercase">Pra que fazer 1 se pode fazer 2</h3>
+    <div class="relative flex flex-col items-center justify-center mt-10 px-4">
+      <div class="flex items-center justify-center w-full max-w-3xl mx-auto relative">
+        <!-- Botão anterior mais próximo -->
+        <button id="carousel-prev" type="button" class="left-4 top-1/2 -translate-y-1/2 hover:bg-white/40 text-white rounded-full p-4 z-10 flex items-center justify-center w-16 h-16 absolute">
+          <img src="combos/setas.png" alt="Anterior" class="w-12 h-12" />
+        </button>
+        <!-- Carrossel principal -->
+        <div class="overflow-hidden w-full">
+          <div id="carousel-cards" class="flex transition-transform duration-500 ease-in-out">
+            <!-- Combo 1 -->
+            <div class="min-w-full flex-shrink-0 flex flex-col items-center">
+  <div class="w-[420px] md:w-[520px] p-8 bg-white/10 rounded-3xl backdrop-blur-md shadow-lg mx-auto flex flex-col items-center">
+    <div class="flex gap-6 justify-center">
+      <img src="combos/lomilomi.jpg" class="carousel-img" alt="Combo 1 Foto 1" />
+      <img src="combos/bodyscrub.jpg" class="carousel-img" alt="Combo 1 Foto 2" />
+    </div>
+    <p class="mt-6 text-lg font-semibold">LOMI LOMI + BODY SCRUB</p>
+    <p class="text-gray-200 mt-2">R$150,00</p>
+    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100">Agendar</button>
+  </div>
+</div>
+            <!-- Combo 2 -->
+            <div class="min-w-full flex-shrink-0 flex flex-col items-center">
+  <div class="w-[420px] md:w-[520px] p-8 bg-white/10 rounded-3xl backdrop-blur-md shadow-lg mx-auto flex flex-col items-center">
+    <div class="flex gap-6 justify-center">
+      <img src="combos/hottoel.webp" class="carousel-img" alt="Combo 2 Foto 1" />
+      <img src="combos/reiki.jpg" class="carousel-img" alt="Combo 2 Foto 2" />
+    </div>
+    <p class="mt-6 text-lg font-semibold">HOT TOWEL + REIKI</p>
+    <p class="text-gray-200 mt-2">R$150,00</p>
+    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100">Agendar</button>
+  </div>
+</div>
+            <!-- Combo 3 -->
+            <div class="min-w-full flex-shrink-0 flex flex-col items-center">
+  <div class="w-[420px] md:w-[520px] p-8 bg-white/10 rounded-3xl backdrop-blur-md shadow-lg mx-auto flex flex-col items-center">
+    <div class="flex gap-6 justify-center">
+      <img src="combos/wax.png" class="carousel-img" alt="Combo 3 Foto 1" />
+      <img src="combos/hair massage.avif" class="carousel-img" alt="Combo 3 Foto 2" />
+    </div>
+    <p class="mt-6 text-lg font-semibold">WAX + HAIR MASSAGE</p>
+    <p class="text-gray-200 mt-2">R$150,00</p>
+    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100">Agendar</button>
+  </div>
+</div>
+            <!-- Combo 4 -->
+            <div class="min-w-full flex-shrink-0 flex flex-col items-center">
+  <div class="w-[420px] md:w-[520px] p-8 bg-white/10 rounded-3xl backdrop-blur-md shadow-lg mx-auto flex flex-col items-center">
+    <div class="flex gap-6 justify-center">
+      <img src="combos/feet spa.jpg" class="carousel-img" alt="Combo 4 Foto 1" />
+      <img src="combos/fatmassage.webp" class="carousel-img" alt="Combo 4 Foto 2" />
+    </div>
+    <p class="mt-6 text-lg font-semibold">FEET SPA + FAT MASSAGE</p>
+    <p class="text-gray-200 mt-2">R$150,00</p>
+    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100">Agendar</button>
+  </div>
+</div>
+          </div>
+        </div>
+        <!-- Botão próximo mais próximo -->
+        <button id="carousel-next" type="button" class="right-4 top-1/2 -translate-y-1/2 hover:bg-white/40 text-white rounded-full p-4 z-10 flex items-center justify-center w-16 h-16 absolute">
+          <img src="combos/setas.png" alt="Próximo" class="w-12 h-12" />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Padroniza as imagens do carrossel para quadrado grande e força o preenchimento */
+  .carousel-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+    background: #222;
+    aspect-ratio: 1/1;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  @media (min-width: 768px) {
+    .carousel-img {
+      width: 220px;
+      height: 220px;
+    }
+  }
+</style>
+
+<script>
+  // Navbar sticky fluido: apenas fixa no topo ao dar scroll, sem animação de sumir/aparecer
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      navbar.classList.add('fixed', 'top-0', 'left-0', 'z-50', 'shadow-lg');
+      navbar.style.transform = '';
+      navbar.style.transition = '';
+    } else {
+      navbar.classList.remove('fixed', 'top-0', 'left-0', 'z-50', 'shadow-lg');
+      navbar.style.transform = '';
+      navbar.style.transition = '';
+    }
+  });
+
+  // Carrossel funcional
+  const carousel = document.getElementById('carousel-cards');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+  let currentIndex = 0;
+  const totalCards = carousel.children.length;
+
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalCards;
+    updateCarousel();
+  });
+
+  // Garantir que o carrossel inicie na posição correta
+  updateCarousel();
+</script>
+
+<!-- Catálogo de Produtos -->
+<section id="catalogo" class="bg-white/80 py-16 min-h-screen flex flex-col items-center justify-center">
+  <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-10 uppercase tracking-wide">Catálogo de Produtos</h2>
+  <div class="w-full max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Produto 1 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
+        <img src="produtos/produto1.jpg" alt="Produto 1" class="w-40 h-40 object-cover rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Massagem Relaxante</h3>
+        <p class="text-gray-600 mb-4 text-center">Uma massagem para aliviar o estresse e relaxar o corpo inteiro.</p>
+        <button class="px-6 py-2 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition">Agendar</button>
+      </div>
+      <!-- Produto 2 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
+        <img src="produtos/produto2.jpg" alt="Produto 2" class="w-40 h-40 object-cover rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Limpeza de Pele</h3>
+        <p class="text-gray-600 mb-4 text-center">Tratamento facial para renovar e hidratar a pele do rosto.</p>
+        <button class="px-6 py-2 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition">Agendar</button>
+      </div>
+      <!-- Produto 3 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
+        <img src="produtos/produto3.jpg" alt="Produto 3" class="w-40 h-40 object-cover rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Reflexologia Podal</h3>
+        <p class="text-gray-600 mb-4 text-center">Técnica de massagem nos pés para equilíbrio e bem-estar.</p>
+        <button class="px-6 py-2 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition">Agendar</button>
+      </div>
+      <!-- Produto 4 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
+        <img src="produtos/produto4.jpg" alt="Produto 4" class="w-40 h-40 object-cover rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Spa dos Pés</h3>
+        <p class="text-gray-600 mb-4 text-center">Cuidado completo para pés cansados e ressecados.</p>
+        <button class="px-6 py-2 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition">Agendar</button>
+      </div>
+      <!-- Produto 5 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
+        <img src="produtos/produto5.jpg" alt="Produto 5" class="w-40 h-40 object-cover rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Drenagem Linfática</h3>
+        <p class="text-gray-600 mb-4 text-center">Massagem para estimular a circulação e eliminar toxinas.</p>
+        <button class="px-6 py-2 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition">Agendar</button>
+      </div>
+      <!-- Produto 6 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
+        <img src="produtos/produto6.jpg" alt="Produto 6" class="w-40 h-40 object-cover rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Massagem com Pedras Quentes</h3>
+        <p class="text-gray-600 mb-4 text-center">Relaxamento profundo com pedras aquecidas.</p>
+        <button class="px-6 py-2 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition">Agendar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rodapé -->
+<footer class="bg-green-900 text-white py-10 mt-20">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="flex flex-col items-center md:items-start">
+      <img src="icone.png" alt="Alooma Spa & Care" class="w-20 h-14 mb-2">
+      <h4 class="text-2xl font-bold mb-2">Alooma Spa & Care</h4>
+      <p class="text-green-100 text-sm mb-2">Seu bem-estar em primeiro lugar.</p>
+      <p class="text-green-200 text-xs">CNPJ: 12.345.678/0001-99</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <h5 class="font-semibold mb-2">Contato</h5>
+      <p class="text-green-100 text-sm">Rua das Flores, 123 - Centro</p>
+      <p class="text-green-100 text-sm">Rio de Janeiro - RJ</p>
+      <p class="text-green-100 text-sm">Tel: (21) 99999-8888</p>
+      <p class="text-green-100 text-sm">Email: contato@aloomaspa.com.br</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <h5 class="font-semibold mb-2">Horário de Funcionamento</h5>
+      <p class="text-green-100 text-sm">Seg a Sex: 09h - 20h</p>
+      <p class="text-green-100 text-sm">Sábado: 10h - 18h</p>
+      <p class="text-green-100 text-sm">Domingo: Fechado</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <h5 class="font-semibold mb-2">Redes Sociais</h5>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-green-300 transition">Instagram</a>
+        <a href="#" class="hover:text-green-300 transition">Facebook</a>
+        <a href="#" class="hover:text-green-300 transition">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-green-200 text-xs mt-8">
+    &copy; 2025 Alooma Spa & Care. Todos os direitos reservados.
+  </div>
+</footer>
+</body>
+</html>
