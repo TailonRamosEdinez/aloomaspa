@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alooma Spa & Care</title>
+  <meta name="description" content="Alooma Spa & Care - Massagens relaxantes e tratamentos de bem-estar. Oferecemos Lomi Lomi, Body Scrub, Reiki e muito mais. Reserve sua sessão agora!" />
+  <meta name="keywords" content="spa, massagem, relaxamento, bem-estar, lomi lomi, massage, tratamento, cuidado pessoal" />
+  <meta name="author" content="Alooma Spa & Care" />
+  <meta property="og:title" content="Alooma Spa & Care - Massagens e Bem-estar" />
+  <meta property="og:description" content="Experimente as melhores massagens relaxantes. Lomi Lomi, Body Scrub, Reiki e mais tratamentos para seu bem-estar." />
+  <meta property="og:type" content="business.business" />
+  <title>Alooma Spa & Care - Massagens Relaxantes e Bem-estar</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,20 +18,46 @@
     body {
       font-family: 'Playfair Display', serif;
     }
+    
+    .menu-active {
+      display: flex;
+    }
+    
+    .menu-inactive {
+      display: none;
+    }
+    
+    @media (min-width: 768px) {
+      .menu-inactive {
+        display: flex !important;
+      }
+      .mobile-menu-btn {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body class="bg-cover bg-no-repeat bg-center" style="background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1400&q=80');">
   <!-- Navbar -->
   <nav id="navbar" class="flex justify-between items-center p-6 bg-white/60 backdrop-blur-sm shadow-md w-full transition-all duration-300">
-    <div class="flex items-center gap-80">
-  <img src="icone.png" alt="Ícone" class="w-18 h-14" sizes="30" />
-  <h1 class="text-2xl Agendar text-green-600">Alooma Spa & Care</h1>
-</div>
-    <ul class="flex gap-6 text-lg font-semibold text-gray-700">
-      <li><a href="#" class="hover:text-green-600">Serviço</a></li>
-      <li><a href="#" class="hover:text-green-600">Ajuda</a></li>
-      <li><a href="#" class="hover:text-green-600">Sobre</a></li>
-      <li><a href="#" class="hover:text-green-600">Contato</a></li>
+    <div class="flex items-center gap-4 md:gap-80">
+      <img src="icone.png" alt="Logo Alooma Spa & Care" class="w-18 h-14" />
+      <h1 class="text-2xl font-bold text-green-600">Alooma Spa & Care</h1>
+    </div>
+    
+    <!-- Botão Menu Mobile -->
+    <button id="mobile-menu-btn" class="mobile-menu-btn md:hidden flex flex-col gap-1.5 cursor-pointer focus:outline-none">
+      <span class="w-6 h-0.5 bg-gray-700 transition-all duration-300 block"></span>
+      <span class="w-6 h-0.5 bg-gray-700 transition-all duration-300 block"></span>
+      <span class="w-6 h-0.5 bg-gray-700 transition-all duration-300 block"></span>
+    </button>
+    
+    <!-- Menu Navegação -->
+    <ul id="nav-menu" class="menu-inactive md:flex gap-6 text-lg font-semibold text-gray-700 absolute md:static top-20 left-0 right-0 md:top-auto md:left-auto md:right-auto bg-white/95 md:bg-transparent flex-col md:flex-row p-6 md:p-0 rounded-b-lg md:rounded-none shadow-md md:shadow-none">
+      <li><a href="#servicos" class="block hover:text-green-600 transition">Serviços</a></li>
+      <li><a href="#combos" class="block hover:text-green-600 transition">Combos</a></li>
+      <li><a href="#sobre" class="block hover:text-green-600 transition">Sobre</a></li>
+      <li><a href="#contato" class="block hover:text-green-600 transition">Contato</a></li>
     </ul>
   </nav>
 
@@ -39,14 +71,14 @@
   <!-- Conteúdo acima do vídeo -->
   <div class="relative z-10 max-w-xl">
   <p class="text-7xl md:text-8xl uppercase tracking-wide font-bold mb-6">Lomi Lomi</p>
-  <h2 class="text-4xl md:text-6xl font-bold leading-tight mt-2">Tenha a melhor<br />a melhor massagem</h2>
+  <h2 class="text-4xl md:text-6xl font-bold leading-tight mt-2">Tenha a melhor<br />massagem</h2>
 </div>
   <div class="relative z-10 mt-10 md:mt-0 flex flex-col items-center">
   <img 
-    src="lomilomiHerosection.jpg" 
-    alt="Lomi Lomi Hero Section" 
+    src="combos/lomilomi.jpg" 
+    alt="Lomi Lomi - Massagem havaiana tradicional para relaxamento profundo" 
     class="w-96 h-64 md:w-[500px] md:h-[350px] mx-auto object-cover rounded-3xl"
-    style="border: none;"
+    loading="lazy"
   >
   <!-- LomilomiHeroSection aqui -->
   <div id="LomilomiHeroSection" class="mt-6">
@@ -61,10 +93,10 @@
 </section>
 
   <!-- Combo Section -->
-  <section class="bg-black/50 text-white text-center py-16 min-h-screen flex flex-col justify-center relative overflow-hidden">
+  <section id="combos" class="bg-black/50 text-white text-center py-16 min-h-screen flex flex-col justify-center relative overflow-hidden">
   <!-- Vídeo de fundo combos -->
   <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-    <source src="combos/230188.mov" type="video/mp4" />
+    <source src="videoPrincipal.mp4" type="video/mp4" />
     Seu navegador não suporta vídeos HTML5.
   </video>
   <div class="relative z-10">
@@ -72,8 +104,8 @@
     <div class="relative flex flex-col items-center justify-center mt-10 px-4">
       <div class="flex items-center justify-center w-full max-w-3xl mx-auto relative">
         <!-- Botão anterior mais próximo -->
-        <button id="carousel-prev" type="button" class="left-4 top-1/2 -translate-y-1/2 hover:bg-white/40 text-white rounded-full p-4 z-10 flex items-center justify-center w-16 h-16 absolute">
-          <img src="combos/setas.png" alt="Anterior" class="w-12 h-12" />
+        <button id="carousel-prev" type="button" aria-label="Combo anterior" class="left-4 top-1/2 -translate-y-1/2 hover:bg-white/40 text-white rounded-full p-4 z-10 flex items-center justify-center w-16 h-16 absolute">
+          <img src="combos/setas.png" alt="Seta anterior" class="w-12 h-12" />
         </button>
         <!-- Carrossel principal -->
         <div class="overflow-hidden w-full">
@@ -82,55 +114,55 @@
             <div class="min-w-full flex-shrink-0 flex flex-col items-center">
   <div class="w-[420px] md:w-[520px] p-8 bg-white/10 rounded-3xl backdrop-blur-md shadow-lg mx-auto flex flex-col items-center">
     <div class="flex gap-6 justify-center">
-      <img src="combos/lomilomi.jpg" class="carousel-img" alt="Combo 1 Foto 1" />
-      <img src="combos/bodyscrub.jpg" class="carousel-img" alt="Combo 1 Foto 2" />
+      <img src="combos/lomilomi.jpg" class="carousel-img" alt="Massagem Lomi Lomi havaiana" loading="lazy" />
+      <img src="combos/bodyscrub.jpg" class="carousel-img" alt="Tratamento Body Scrub esfoliante" loading="lazy" />
     </div>
     <p class="mt-6 text-lg font-semibold">LOMI LOMI + BODY SCRUB</p>
     <p class="text-gray-200 mt-2">R$150,00</p>
-    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100">Agendar</button>
+    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100 transition">Agendar</button>
   </div>
 </div>
             <!-- Combo 2 -->
             <div class="min-w-full flex-shrink-0 flex flex-col items-center">
   <div class="w-[420px] md:w-[520px] p-8 bg-white/10 rounded-3xl backdrop-blur-md shadow-lg mx-auto flex flex-col items-center">
     <div class="flex gap-6 justify-center">
-      <img src="combos/hottoel.webp" class="carousel-img" alt="Combo 2 Foto 1" />
-      <img src="combos/reiki.jpg" class="carousel-img" alt="Combo 2 Foto 2" />
+      <img src="combos/hottoel.webp" class="carousel-img" alt="Tratamento Hot Towel quente relaxante" loading="lazy" />
+      <img src="combos/reiki.jpg" class="carousel-img" alt="Sessão de Reiki energética" loading="lazy" />
     </div>
     <p class="mt-6 text-lg font-semibold">HOT TOWEL + REIKI</p>
     <p class="text-gray-200 mt-2">R$150,00</p>
-    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100">Agendar</button>
+    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100 transition">Agendar</button>
   </div>
 </div>
             <!-- Combo 3 -->
             <div class="min-w-full flex-shrink-0 flex flex-col items-center">
   <div class="w-[420px] md:w-[520px] p-8 bg-white/10 rounded-3xl backdrop-blur-md shadow-lg mx-auto flex flex-col items-center">
     <div class="flex gap-6 justify-center">
-      <img src="combos/wax.png" class="carousel-img" alt="Combo 3 Foto 1" />
-      <img src="combos/hair massage.avif" class="carousel-img" alt="Combo 3 Foto 2" />
+      <img src="combos/wax.png" class="carousel-img" alt="Serviço de depilação com cera" loading="lazy" />
+      <img src="combos/hair massage.avif" class="carousel-img" alt="Massagem capilar relaxante" loading="lazy" />
     </div>
     <p class="mt-6 text-lg font-semibold">WAX + HAIR MASSAGE</p>
     <p class="text-gray-200 mt-2">R$150,00</p>
-    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100">Agendar</button>
+    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100 transition">Agendar</button>
   </div>
 </div>
             <!-- Combo 4 -->
             <div class="min-w-full flex-shrink-0 flex flex-col items-center">
   <div class="w-[420px] md:w-[520px] p-8 bg-white/10 rounded-3xl backdrop-blur-md shadow-lg mx-auto flex flex-col items-center">
     <div class="flex gap-6 justify-center">
-      <img src="combos/feet spa.jpg" class="carousel-img" alt="Combo 4 Foto 1" />
-      <img src="combos/fatmassage.webp" class="carousel-img" alt="Combo 4 Foto 2" />
+      <img src="combos/feet spa.jpg" class="carousel-img" alt="Spa para os pés com massagem relaxante" loading="lazy" />
+      <img src="combos/fatmassage.webp" class="carousel-img" alt="Massagem anti-celulite e drenagem" loading="lazy" />
     </div>
     <p class="mt-6 text-lg font-semibold">FEET SPA + FAT MASSAGE</p>
     <p class="text-gray-200 mt-2">R$150,00</p>
-    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100">Agendar</button>
+    <button class="mt-4 px-6 py-2 bg-white text-gray-800 font-bold rounded-full hover:bg-gray-100 transition">Agendar</button>
   </div>
 </div>
           </div>
         </div>
         <!-- Botão próximo mais próximo -->
-        <button id="carousel-next" type="button" class="right-4 top-1/2 -translate-y-1/2 hover:bg-white/40 text-white rounded-full p-4 z-10 flex items-center justify-center w-16 h-16 absolute">
-          <img src="combos/setas.png" alt="Próximo" class="w-12 h-12" />
+        <button id="carousel-next" type="button" aria-label="Próximo combo" class="right-4 top-1/2 -translate-y-1/2 hover:bg-white/40 text-white rounded-full p-4 z-10 flex items-center justify-center w-16 h-16 absolute">
+          <img src="combos/setas.png" alt="Seta próximo" class="w-12 h-12" />
         </button>
       </div>
     </div>
@@ -160,6 +192,26 @@
 </style>
 
 <script>
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', function() {
+      navMenu.classList.toggle('menu-active');
+      navMenu.classList.toggle('menu-inactive');
+    });
+  }
+
+  // Fechar menu ao clicar em um link
+  const navLinks = navMenu.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      navMenu.classList.remove('menu-active');
+      navMenu.classList.add('menu-inactive');
+    });
+  });
+
   // Navbar sticky fluido: apenas fixa no topo ao dar scroll, sem animação de sumir/aparecer
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', function() {
